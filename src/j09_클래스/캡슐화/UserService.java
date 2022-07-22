@@ -26,22 +26,25 @@ public class UserService {
 		
 		System.out.print("비밀번호: ");
 		password = scanner.nextLine();
-		if(username == null || username.isBlank())
+		if(isStrBlank(password)) {
 			return;
 		}
-	
+		
 		System.out.print("이름: ");
 		name = scanner.nextLine();
-
+		if(isStrBlank(name)) {
+			return;
+		}
+		
 		System.out.print("이메일: ");
 		email = scanner.nextLine();
 		if(isStrBlank(email)) {
 			return;
-
+		}
 	}
 
-	private boolean isSerBlank (String str) {
-		return str = null || str.isBlank(); // => .trim.isEmpty();
+	private boolean isStrBlank(String str) {
+		return str == null || str.trim().isEmpty(); // => .trim.isEmpty();
 	}
 
 }
