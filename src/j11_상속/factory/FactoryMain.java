@@ -4,27 +4,36 @@ public class FactoryMain {
 
 	public static void main(String[] args) {
 		
-		// 업캐스팅 > 부모 객체를 자식이 사용가능
-		Factory factory1 = new SamsumgFactory(1);
-		Factory factory2 = new LGFactory(1);
+		SamsumgFactory[] samsumgFactories = new SamsumgFactory[3];
+		samsumgFactories[0] = new SamsumgFactory(1);
+		samsumgFactories[1] = new SamsumgFactory(2);
+		samsumgFactories[2] = new SamsumgFactory(3);
 		
-		Factory[] factories = new Factory[4];
-		factories[0] = new SamsumgFactory(1);
-		factories[1] = new LGFactory(1);
-		factories[2] = new SamsumgFactory(1);
-		factories[3] = new LGFactory(1);
-				
+		LGFactory[] lgFactories = new LGFactory[3];
+		lgFactories[0] = new LGFactory(1);
+		lgFactories[1] = new LGFactory(2);
+		lgFactories[2] = new LGFactory(3);
 		
-		System.out.println("모든 공장을 가동합니다.");
-		for(int i = 0; i < factories.length; i++) {
-			factories[i].start();
+		for(int i = 0; i < samsumgFactories.length; i++) {
+			System.out.println("삼성 공장 가동");
+			samsumgFactories[i].start();
 		}
 		
-		System.out.println();
+		for(int i = 0; i < lgFactories.length; i++) {
+			System.out.println("LG 공장 중지");
+			lgFactories[i].stop();
+		}
 		
-		System.out.println("모든 공장을 중지합니다.");
-		for(int i = 0; i < factories.length; i++) {
-			factories[i].stop();
+		System.out.println("---------------------");
+		
+		for(int i = 0; i < lgFactories.length; i++) {
+			System.out.println("LG 공장 가동");
+			lgFactories[i].start();
+		}
+		
+		for(int i = 0; i < lgFactories.length; i++) {
+			System.out.println("LG 공장 중지");
+			lgFactories[i].stop();
 		}
 		
 		
