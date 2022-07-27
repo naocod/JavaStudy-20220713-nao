@@ -93,12 +93,14 @@ public class UserService {
 	private void showSearchUser() {
 		String searchName = null;
 		
-		System.out.println("[학생 이름으로 검색]");
+		System.out.println("[사용자 이름으로 검색]");
 		System.out.println("이름 >> ");
 		searchName = scanner.nextLine();
 		
-		User showSearchUser = searchUserByUserName(searchName);
-		
+		User SearchUser = searchUserByUserName(searchName);
+		if(SearchUser != null) {
+			System.out.println(SearchUser.toString());
+		}
 		
 	}
 	

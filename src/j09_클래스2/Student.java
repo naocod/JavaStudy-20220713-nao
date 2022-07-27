@@ -1,6 +1,8 @@
 package j09_클래스2;
 
 public class Student { // Entity Class 정보만 담음, 학생을 구조화함
+	//<클래스의 속성(변수)>
+	// 메소드의 변수와 달리 값을 넣지 않음
 	private String studentName;
 	private int studentYear;
 	private String studentAddress;
