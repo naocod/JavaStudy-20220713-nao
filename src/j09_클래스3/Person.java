@@ -1,6 +1,6 @@
 package j09_클래스3;
 
-public class Person {
+public abstract class Person {
 	private String name;
 	private int age;
 	// private되어있으면 같은 클래스 내에서만 사용가능함
@@ -28,4 +28,13 @@ public class Person {
 	public String getName() {
 		return name; // 지역변수에 다른 name이 없으므로 this미사용
 	}
+	
+	public abstract String mealTime();
+
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
+	
+	
 }

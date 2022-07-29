@@ -10,12 +10,14 @@ public class PersonMain {
 			System.out.println(i + 1 + "번 사람(나이): " + ages[i]);
 		}
 		
-		Person person1 = new Person(); // 해당 클래스명과 동일한 생성자 호출
+//		Person person1 = new Person(); // 해당 클래스명과 동일한 생성자 호출
 		// new를하면 Heap메모리 영역에서 Person의 크기만큼 빌려 옴
 		//메모리 주소를 생성해서 
 		
-		person1.setName("김준일");
-		System.out.println(person1.getName());
+		//new Person() > Person이 추상클래스이기 때문에 생성할 수 없음
+		
+//		person1.setName("김준일");
+//		System.out.println(person1.getName());
 		
 		String name1 = "김준일";
 		String name2 = "서재효";
