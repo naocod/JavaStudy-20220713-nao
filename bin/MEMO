@@ -49,3 +49,54 @@ private > 외부에서 생성 불가, 호출 불가능
 
 제네릭
 	일반 자료형을 사용할 수 없고 클래스타입으로 사용
+	
+////
+
+ㅇ list > 데이터의 변함이 적은 경우 (데이터 중간에 추가시 뒤에 있는 데이터를 옮겨야함)
+	ㄴ 순서 o, 중복 o	>> ArrayList
+	
+ㅇ set > 최악의 처리시간이 존재(모든 경우를 다 대입) >> tree를 통해 탐색시간을 줄일 수 있음
+	ㄴ 순서 x, 중복 x	>> HashSet
+	ㄴ 수정 x > 지우고 새로 추가해야함
+	
+ㅇ map > list와 set을 섞어놓음, Map<K, V> 키, 값
+	ㄴ 순서 x, 키 중복 x, 값 중복 o	>> HashMap
+
+////
+
+- Collection 인터페이스에서 제공하는 주요 메소드	> list와 set 인터페이스가 가지고 있음
+
+ㅇ boolean add(E e)				|	해당 컬렉션(collection)에 전달된 요소를 추가함. (선택적 기능)
+ㅇ void clear()					|	해당 컬렉션의 모든 요소를 제거함. (선택적 기능)
+ㅇ boolean contains(Object o)	|	해당 컬렉션이 전달된 객체를 포함하고 있는지를 확인함.
+ㅇ boolean equals(Object o)		|	해당 컬렉션과 전달된 객체가 같은지를 확인함.
+ㅇ boolean isEmpty()				|	해당 컬렉션이 비어있는지를 확인함.
+ㅇ Iterator<E> iterator()		|	해당 컬렉션의 반복자(iterator)를 반환함.
+ㅇ boolean remove(Object o)		|	해당 컬렉션에서 전달된 객체를 제거함. (선택적 기능)
+ㅇ int size()					|	해당 컬렉션의 요소의 총 개수를 반환함.
+ㅇ Object[] toArray()			|	해당 컬렉션의 모든 요소를 Object 타입의 배열로 반환함. > object로 바꿔야지 모든 객체의 형태로 반환 가능 (object는 최상위 객체이기 때문)
+
+////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
