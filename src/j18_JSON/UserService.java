@@ -21,6 +21,7 @@ public class UserService {
 				.phone("010-1234-6789")
 				.hobby(hobby)
 				.build();
+		
 		return user;
 		
 	}

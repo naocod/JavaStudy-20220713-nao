@@ -12,6 +12,7 @@ public class Gson3 {
 		User user = UserService.createUser();
 		Gson gson = new GsonBuilder().setPrettyPrinting().create();
 		
+		// Map -> JSON	
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("code", 1);
 		map.put("message", "json 형변환 테스트");

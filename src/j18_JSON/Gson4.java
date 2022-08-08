@@ -14,7 +14,7 @@ public class Gson4 {
 		jsonObject.addProperty("name", "김준일");
 		jsonObject.addProperty("age", 29);
 		jsonObject.addProperty("address", "부산 동래구 사직동");
-		jsonObject.addProperty("phone", "010-1234-6789");
+		jsonObject.addProperty("phone", "010-9988-1916");
 		
 		String json = gson.toJson(jsonObject);
 		
@@ -23,8 +23,9 @@ public class Gson4 {
 		
 		System.out.println(jsonObject);
 		
-	
+		JsonObject jsonObj = gson.fromJson(jsonObject, JsonObject.class);
 		
+		System.out.println(jsonObj);
 		
 	}
 }

@@ -8,7 +8,6 @@ public class Gson2 {
 	public static void main(String[] args) {
 		
 		User user = UserService.createUser();
-		
 		// 객체를 JSON으로 변환
 		Gson gson = new GsonBuilder()
 				.excludeFieldsWithoutExposeAnnotation()
@@ -16,7 +15,7 @@ public class Gson2 {
 				.setPrettyPrinting()
 				.create();
 		
-		
+		// 객체를 JSON으로 변환 -> toJson(객체)
 		String userJson = gson.toJson(user);
 		
 		System.out.println(userJson);
