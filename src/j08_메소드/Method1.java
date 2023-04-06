@@ -13,7 +13,7 @@ public class Method1 {
 			String content = nextCommandIndex != -1 ? data.substring(contentIndex + 1, nextCommandIndex) 
 					: data.substring(contentIndex + 1) ; 
 			
-
+			
 			System.out.println(command + ": " + content); 
 			
 			if(nextCommandIndex == -1) {
